@@ -2,6 +2,15 @@ extends layout
 
 block content
   h1 Palindrome Checker
+  h3 Hello! Welcome to my palindrome checker.
+  p Enter any assortment of words to see, if reversed, will come out to the same message.
+  p For example...
+  ul
+    li Racecar
+    li Step on no pets
+    li Hannah
+  ul
+  h4 Now, go have fun with this little program!
   form(method = "POST" action = "/")
     label(for = "userText") Enter your text here:
     br
@@ -11,3 +20,6 @@ block content
     button(type = "submit") Submit
   if message
     p=message
+  if reverse
+    p= reverse
+
