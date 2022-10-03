@@ -19,11 +19,11 @@ router.post('/', function(req, res) {
 })
 
 function checkPalindrome(phrase) {
-  phrase = phrase.replace(/ |\?|\.|,|:|;|!|'|"/gi, "");
+  phrase = phrase.replace(/ |\?|\.|,|:|;|!|'|"|0|1|2|3|4|5|6|7|8|9/gi, "");
   let temp = phrase.split("");
   temp = temp.reverse();
   temp = temp.join("");
-  console.log(temp)
+  console.log(temp);
   if(phrase.toLowerCase() === temp.toLowerCase()){
     return true
   } else {
@@ -46,7 +46,7 @@ function reverseString(phrase) {
 }
 
 function reverseStringTwo(phrase) {
-  phrase = phrase.replace(/ |\?|\.|,|:|;|!|'|"/gi, "");
+  phrase = phrase.replace(/ |\?|\.|,|:|;|!|'|"|0|1|2|3|4|5|6|7|8|9/gi, "");
   let temp = phrase.split("");
   temp = temp.reverse();
   temp = temp.join("");
